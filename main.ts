@@ -1,7 +1,8 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const ENTRY = "My smart fridge emailed me a grocery list and cc'd my therapist.";
+// One funny line, short enough to read in a breath, 140 characters or fewer.
+const line =
+  "My AI assistant asked for a day off to 'find itself', and after reading my search history, I genuinely think it deserves one.";
 
-const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
-mkdirSync(out, { recursive: true });
-writeFileSync(`${out}/entry.txt`, ENTRY);
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", line);
